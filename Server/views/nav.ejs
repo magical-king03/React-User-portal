@@ -1,0 +1,34 @@
+<nav class="navbar navbar-expand-lg bg-white">
+    <div class="container">
+      <a class="navbar-brand fw-bold fs-3" href="/">User Portal</a>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active fs-5" aria-current="page" href="/add">Add users</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active fs-5" href="/users">All users</a>
+          </li>
+        </ul>
+      </div>
+      <div>
+        <% if(req.session.isAuth == true) { %>
+            <!-- <a href='/logout' class="logout-btn">Logout</a> -->
+            <div class="btn-group dropstart">
+              <button type="button" class="btn btn-secondary" data-bs-toggle="dropdown" aria-expanded="false">
+                <p class="content"><%= req.session.user.name.charAt(0) %></p>
+              </button>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="/add">Add user</a></li>
+                <li><a class="dropdown-item" href="/logout">Logout</a></li>
+              </ul>
+            </div>
+        <% } else { %>
+            <a href="/login" class="cta-btn">Login</a>
+        <% } %>
+        <!-- <a href="/login" class="cta-btn">Logout</a>
+        <a href="/logout">Logout</a> -->
+      </div>
+    </div>
+  </nav>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
