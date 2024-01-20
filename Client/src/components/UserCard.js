@@ -22,7 +22,7 @@ function UserCard(props) {
             <div>
               <button class="cta-btn-1" onClick={editUserHandler}>Edit</button>
             </div>
-            <form action="http://localhost:8000/del" method="post">
+            <form action="https://node-portal-puce.vercel.app/del" method="post">
               <div className="">
                 <input type="hidden" name="email" value={props.email} />
                 <button class="cta-btn-2">Del</button>

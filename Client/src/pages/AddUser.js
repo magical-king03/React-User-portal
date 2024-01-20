@@ -13,7 +13,7 @@ function AddUser() {
             email: emailInput.current.value,
         }
         console.log(tempUser)
-        fetch('http://localhost:8000/save-data', {
+        fetch('https://node-portal-puce.vercel.app/save-data', {
             method: 'post',
             headers: {
                 'Content-Type': 'application/json'

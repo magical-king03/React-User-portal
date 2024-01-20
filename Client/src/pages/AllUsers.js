@@ -4,7 +4,7 @@ import UserCard from "../components/UserCard"
 function AllUsers() {
     let [users, setUsers] = useState([])
 
-    fetch('http://localhost:8000/api-users').then(
+    fetch('https://node-portal-puce.vercel.app/api-users').then(
         response => response.json()).then(data => {
             let tempUser = []
             for (const key in data) {

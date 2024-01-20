@@ -18,7 +18,7 @@ function EditCard() {
         <div class="add-page">
             <h1 class="">Update user</h1>
             <p class="">Update the name or/and email to update the required user in the database</p>
-            <form action="http://localhost:8000/update" method="post">
+            <form action="https://node-portal-puce.vercel.app/update" method="post">
                 <div class="mb-3">
                     <label for="exampleInputPassword1" class="form-label">Name:</label>
                     <input type="text" name="name" value={nameValue} onChange={handleNameChange} />
