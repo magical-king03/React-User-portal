@@ -47,7 +47,7 @@ let isValid = true
 
 app.use(express.static('public'))
 app.use(cors({
-    origin: 'http://localhost:3000', 
+    origin: 'https://react-user-portal.vercel.app/', 
 }));
 app.use(express.json())
 
@@ -91,13 +91,13 @@ app.post('/update', async (req, res) => {
                 email: email,
             }
         })
-    res.redirect('http://localhost:3000/users')
+    res.redirect('https://react-user-portal.vercel.app/users')
 })
 
 app.post('/del', async (req, res) => {
     let { email } = req.body;
     let userData = await user.deleteOne({ email: email })
-    res.redirect('http://localhost:3000/users')
+    res.redirect('https://react-user-portal.vercel.app/users')
 })
 
 app.get('/register', (req, res) => {
